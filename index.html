@@ -10,7 +10,6 @@
     <main class="page">
       <h1>Регистрация на прогулку</h1>
       <form class="form" action="#" method="post">
-        <!-- TODO fieldset/legend -->
         <div class="form__field">
           <label>Имя</label><input type="text" placeholder="Введите имя" />
         </div>
@@ -18,7 +17,28 @@
           <label>Email</label
           ><input type="text" placeholder="name@example.com" />
         </div>
-        <!-- TODO radio, checkbox, select, textarea --><button type="submit">
+        <fieldset>
+      <legend>Выберите время</legend>
+      <label>
+      <input type="radio" name="time" value="10"> 10:00
+      </label>
+      <label>
+      <input type="radio" name="time" value="18"> 18:00
+      </label>
+      </fieldset>
+      <label>
+      <input type="checkbox" name="agree" required>
+       Я согласен с условиями использования
+      </label>
+      <label type="checkbox" name="agree" required>
+       <select id="route" name="route">
+        <option value="center">по историческим местам</option>
+        <option value="center">на параходе</option>
+        <option value="center">по лесу</option>
+       </select>
+       <textarea id="comment" name="comment"></textarea>
+      </label>
+      <button type="submit">
           Записаться
         </button>
       </form>
