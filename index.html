@@ -10,17 +10,50 @@
     <main class="page">
       <h1>Регистрация на прогулку</h1>
       <form class="form" action="#" method="post">
-        <!-- TODO fieldset/legend -->
+        <fieldset class="form__group">
+          <legend>Контактные данные</legend>
+          <div class="form__field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Введите имя" required />
+          </div>
+          <div class="form__field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="name@example.com" required />
+          </div>
+          <div class="form__field">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 900 000-00-00" />
+          </div>
+        </fieldset>
+
+        <fieldset class="form__group">
+          <legend>Выберите время</legend>
+          <label class="form__choice"><input type="radio" name="time" value="10" required /> 10:00</label>
+          <label class="form__choice"><input type="radio" name="time" value="18" /> 18:00</label>
+        </fieldset>
+
         <div class="form__field">
-          <label>Имя</label><input type="text" placeholder="Введите имя" />
+          <label for="date">Дата прогулки</label>
+          <input id="date" name="date" type="date" />
         </div>
+
         <div class="form__field">
-          <label>Email</label
-          ><input type="text" placeholder="name@example.com" />
+          <label for="route">Маршрут</label>
+          <select id="route" name="route">
+            <option value="center">Центр</option>
+            <option value="north">Север</option>
+            <option value="south">Юг</option>
+          </select>
         </div>
-        <!-- TODO radio, checkbox, select, textarea --><button type="submit">
-          Записаться
-        </button>
+
+        <div class="form__field">
+          <label for="comment">Комментарий</label>
+          <textarea id="comment" name="comment"></textarea>
+        </div>
+
+        <label class="form__choice"><input type="checkbox" name="agreement" required /> Я согласен</label>
+
+        <button type="submit">Записаться</button>
       </form>
     </main>
   </body>
